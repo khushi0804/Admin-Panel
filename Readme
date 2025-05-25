@@ -1,0 +1,57 @@
+admin-panel/
+├── public/
+│   ├── index.html
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   ├── Pagination.jsx
+│   │   │   └── Table.jsx
+│   │   ├── charts/
+│   │   │   ├── VisitorChart.jsx
+│   │   │   └── StrengthChart.jsx
+│   │   ├── layout/
+│   │   │   ├── Layout.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   └── Sidebar.jsx
+│   │   └── weather/
+│   │       └── WeatherWidget.jsx
+│   ├── pages/
+│   │   ├── Dashboard.jsx
+│   │   ├── organization/
+│   │   │   ├── Organizations.jsx
+│   │   │   ├── Groups.jsx
+│   │   │   ├── Departments.jsx
+│   │   │   └── Roles.jsx
+│   │   ├── users/
+│   │   │   ├── Users.jsx
+│   │   │   └── UserListing.jsx
+│   │   ├── students/
+│   │   │   ├── Students.jsx
+│   │   │   └── StudentListing.jsx
+│   │   └── settings/
+│   │       ├── DeviceHealth.jsx
+│   │       ├── ThemeSettings.jsx
+│   │       └── TimeZoneSettings.jsx
+│   ├── context/
+│   │   ├── ThemeContext.jsx
+│   │   └── AuthContext.jsx
+│   ├── hooks/
+│   │   ├── useWeather.js
+│   │   ├── usePagination.js
+│   │   └── useLocalStorage.js
+│   ├── data/
+│   │   └── sampleData.js
+│   ├── utils/
+│   │   ├── constants.js
+│   │   └── helpers.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
