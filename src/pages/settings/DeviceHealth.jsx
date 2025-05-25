@@ -5,12 +5,12 @@ import { formatDate, getRelativeTime } from '../../utils/helpers'
 
 const DeviceHealth = () => {
   const themeContext = useTheme()
-  
+
   // Add error handling for theme context
   if (!themeContext) {
     throw new Error('DeviceHealth must be used within a ThemeProvider')
   }
-  
+
   const { isDark } = themeContext
   const [devices, setDevices] = useState([])
   const [selectedDevice, setSelectedDevice] = useState(null)
@@ -91,7 +91,7 @@ const DeviceHealth = () => {
         ip: '192.168.1.30'
       }
     ]
-    
+
     setTimeout(() => {
       setDevices(mockDevices)
       setLoading(false)
@@ -317,7 +317,7 @@ const DeviceHealth = () => {
                         {device.cpu}%
                       </span>
                       <div className="ml-2 w-16 bg-gray-200 rounded-full h-2">
-                        <div 
+                        <div
                           className={`h-2 rounded-full ${device.cpu >= 90 ? 'bg-red-600' : device.cpu >= 70 ? 'bg-yellow-600' : 'bg-green-600'}`}
                           style={{ width: `${device.cpu}%` }}
                         ></div>
@@ -330,7 +330,7 @@ const DeviceHealth = () => {
                         {device.memory}%
                       </span>
                       <div className="ml-2 w-16 bg-gray-200 rounded-full h-2">
-                        <div 
+                        <div
                           className={`h-2 rounded-full ${device.memory >= 90 ? 'bg-red-600' : device.memory >= 70 ? 'bg-yellow-600' : 'bg-green-600'}`}
                           style={{ width: `${device.memory}%` }}
                         ></div>
@@ -343,7 +343,7 @@ const DeviceHealth = () => {
                         {device.disk}%
                       </span>
                       <div className="ml-2 w-16 bg-gray-200 rounded-full h-2">
-                        <div 
+                        <div
                           className={`h-2 rounded-full ${device.disk >= 90 ? 'bg-red-600' : device.disk >= 70 ? 'bg-yellow-600' : 'bg-green-600'}`}
                           style={{ width: `${device.disk}%` }}
                         ></div>
@@ -356,7 +356,7 @@ const DeviceHealth = () => {
                         {device.network}%
                       </span>
                       <div className="ml-2 w-16 bg-gray-200 rounded-full h-2">
-                        <div 
+                        <div
                           className={`h-2 rounded-full ${device.network >= 90 ? 'bg-red-600' : device.network >= 70 ? 'bg-yellow-600' : 'bg-green-600'}`}
                           style={{ width: `${device.network}%` }}
                         ></div>
@@ -402,7 +402,7 @@ const DeviceHealth = () => {
                   </svg>
                 </button>
               </div>
-              
+
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className={`font-medium ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>Type:</span>
@@ -433,7 +433,7 @@ const DeviceHealth = () => {
                   </span>
                 </div>
               </div>
-              
+
               <div className="flex justify-end mt-6 space-x-3">
                 <button
                   onClick={() => setSelectedDevice(null)}

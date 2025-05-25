@@ -1,0 +1,22 @@
+{
+  "dashboard": "Dashboard",
+  "organization": "Organization",
+  "organizations": "Organizations",
+  "groups": "Groups",
+  "departments": "Departments",
+  "roles": "Roles",
+  "weather": "Weather",
+  "users": "Users",
+  "userListing": "User Listing",
+  "students": "Students",
+  "studentListing": "Student Listing",
+  "settings": "Settings",
+  "deviceHealth": "Device Health",
+  "themeSettings": "Theme Settings",
+  "timezoneSettings": "Timezone Settings",
+    "adminPanel": "Admin Panel",
+  "welcome": "Welcome",
+  "user": "User",
+  "logout": "Logout"
+
+}

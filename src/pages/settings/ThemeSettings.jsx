@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import {ThemeContext } from '../../contexts/ThemeContext';
+import { ThemeContext } from '../../contexts/ThemeContext';
 import Button from '../../components/common/Button';
 import Modal from '../../components/common/Modal';
 
@@ -67,11 +67,10 @@ const ThemeSettings = () => {
             {themes.map((themeOption) => (
               <div
                 key={themeOption.value}
-                className={`border-2 rounded-lg p-4 cursor-pointer transition-all duration-200 ${
-                  tempTheme === themeOption.value
+                className={`border-2 rounded-lg p-4 cursor-pointer transition-all duration-200 ${tempTheme === themeOption.value
                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'
                     : 'border-gray-200 dark:border-gray-600 hover:border-gray-300 dark:hover:border-gray-500'
-                }`}
+                  }`}
                 onClick={() => setTempTheme(themeOption.value)}
               >
                 <div className={`h-12 rounded mb-3 ${themeOption.preview}`}></div>
@@ -102,11 +101,10 @@ const ThemeSettings = () => {
             {colorOptions.map((color) => (
               <div
                 key={color.value}
-                className={`relative cursor-pointer rounded-lg p-3 border-2 transition-all duration-200 ${
-                  tempPrimaryColor === color.value
+                className={`relative cursor-pointer rounded-lg p-3 border-2 transition-all duration-200 ${tempPrimaryColor === color.value
                     ? 'border-gray-900 dark:border-white scale-105'
                     : 'border-gray-200 dark:border-gray-600 hover:border-gray-400'
-                }`}
+                  }`}
                 onClick={() => setTempPrimaryColor(color.value)}
               >
                 <div className={`w-8 h-8 rounded-full ${color.color} mx-auto`}></div>
@@ -187,7 +185,7 @@ const ThemeSettings = () => {
       >
         <div className="p-4">
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Are you sure you want to reset all theme settings to their default values? 
+            Are you sure you want to reset all theme settings to their default values?
             This action cannot be undone.
           </p>
           <div className="flex gap-3 justify-end">

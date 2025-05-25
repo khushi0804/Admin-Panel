@@ -1,0 +1,21 @@
+{
+  "dashboard": "डैशबोर्ड",
+  "organization": "संगठन",
+  "organizations": "संगठन",
+  "groups": "समूह",
+  "departments": "विभाग",
+  "roles": "भूमिकाएं",
+  "weather": "मौसम",
+  "users": "उपयोगकर्ता",
+  "userListing": "उपयोगकर्ता सूची",
+  "students": "छात्र",
+  "studentListing": "छात्र सूची",
+  "settings": "सेटिंग्स",
+  "deviceHealth": "डिवाइस स्वास्थ्य",
+  "themeSettings": "थीम सेटिंग्स",
+  "timezoneSettings": "समय क्षेत्र सेटिंग्स",
+  "adminPanel": "एडमिन पैनल",
+  "welcome": "स्वागत है",
+  "user": "यूजर",
+  "logout": "लॉग आउट"
+}
