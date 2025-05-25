@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Search, Filter, Eye, Edit, Trash2, Download, Plus, UserCheck, UserX, Phone, Mail, MapPin } from 'lucide-react';
+import Modal from '../../components/common/Modal'
 
 const StudentListing = () => {
   const [students] = useState([
@@ -103,12 +104,12 @@ const StudentListing = () => {
   const filteredStudents = useMemo(() => {
     return students.filter(student => {
       const matchesSearch = student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          student.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          student.idCardNo.toLowerCase().includes(searchTerm.toLowerCase());
-      
+        student.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        student.idCardNo.toLowerCase().includes(searchTerm.toLowerCase());
+
       const matchesStatus = statusFilter === 'all' || student.status.toLowerCase() === statusFilter;
       const matchesDepartment = departmentFilter === 'all' || student.department === departmentFilter;
-      
+
       return matchesSearch && matchesStatus && matchesDepartment;
     });
   }, [students, searchTerm, statusFilter, departmentFilter]);
@@ -124,11 +125,10 @@ const StudentListing = () => {
   };
 
   const StatusBadge = ({ status }) => (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-      status === 'Active' 
-        ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100' 
+    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${status === 'Active'
+        ? 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100'
         : 'bg-red-100 text-red-800 dark:bg-red-800 dark:text-red-100'
-    }`}>
+      }`}>
       {status === 'Active' ? <UserCheck className="w-3 h-3 mr-1" /> : <UserX className="w-3 h-3 mr-1" />}
       {status}
     </span>
@@ -144,14 +144,8 @@ const StudentListing = () => {
             <p className="text-gray-600 dark:text-gray-400 mt-1">Manage student records and information</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
-            <button className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              <Download className="w-4 h-4 mr-2" />
-              Export
-            </button>
-            <button className="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-              <Plus className="w-4 h-4 mr-2" />
-              Add Student
-            </button>
+  
+       
           </div>
         </div>
       </div>
@@ -288,18 +282,8 @@ const StudentListing = () => {
                       >
                         <Eye className="w-4 h-4" />
                       </button>
-                      <button
-                        className="text-green-600 hover:text-green-900 dark:text-green-400 dark:hover:text-green-300 p-1 hover:bg-green-50 dark:hover:bg-green-900/20 rounded transition-colors"
-                        title="Edit Student"
-                      >
-                        <Edit className="w-4 h-4" />
-                      </button>
-                      <button
-                        className="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300 p-1 hover:bg-red-50 dark:hover:bg-red-900/20 rounded transition-colors"
-                        title="Delete Student"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </button>
+                 
+              
                     </div>
                   </td>
                 </tr>
@@ -351,11 +335,10 @@ const StudentListing = () => {
                       <button
                         key={i + 1}
                         onClick={() => setCurrentPage(i + 1)}
-                        className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${
-                          currentPage === i + 1
+                        className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${currentPage === i + 1
                             ? 'z-10 bg-blue-50 dark:bg-blue-900 border-blue-500 text-blue-600 dark:text-blue-200'
                             : 'bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600'
-                        }`}
+                          }`}
                       >
                         {i + 1}
                       </button>
@@ -482,9 +465,7 @@ const StudentListing = () => {
                 >
                   Close
                 </button>
-                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                  Edit Student
-                </button>
+         
               </div>
             </div>
           </div>
